@@ -1,0 +1,60 @@
+
+<section class="home p-5">
+    <div class="title d-flex flex-column gap-5 p-1 justify-content-center align-items-center text-center">
+      <h1 class=" waviy" title="showData">
+        <span style="--i: 1">S</span>
+        <span style="--i: 2">H</span>
+        <span style="--i: 3">O</span>
+        <span style="--i: 4">W</span>
+        <span style="--i: 5">-</span>
+        <span style="--i: 6">D</span>
+        <span style="--i: 7">A</span>
+        <span style="--i: 8">T</span>
+        <span style="--i: 9">A</span>
+        
+      </h1>
+      
+    </div>
+   
+    <input type="text" [(ngModel)]="searchvalue" placeholder="Search by customer name" class="form-control p-3 w-50 text-capitalize  text-dark fa-random"  >
+   
+    <table class="table table-striped  table-bordered h-50 text-center border border-1  shadow" >
+      <thead>
+        <tr>
+          <th>Customer ID</th>
+          <th>Customer Name</th>
+          <th>Total Amount</th>
+          <th>GRAPH</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let customer of clients | serch:searchvalue">
+          <td>{{customer.id}}</td>
+          <td>{{ customer.name }}</td>
+          <td>{{ total[customer.id] || 0}}</td>
+          <td><button class="bg-primary-subtle  rounded" (click)="viewDetails2(customer.id)">See Details</button></td>
+        </tr>
+      </tbody>
+    </table>
+  
+    
+  </section>  
+  <section >
+    <div>
+      <div class="graph">
+        <div class="col-md-8 m-auto pt-3">
+          <div>
+            <canvasjs-chart [options]="chartOptions" [styles]="{width: '100%', height:'360px'}"></canvasjs-chart>    
+        </div>         
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <footer class="p-2 text-bg-dark text-center mo">
+    <p>
+       Designed by Mohamed Ali. All rights reserved. 
+    </p>
+  
+  </footer>
+  

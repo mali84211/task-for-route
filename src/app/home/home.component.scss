@@ -1,0 +1,66 @@
+.graph{
+    padding: 0;
+  
+
+}
+.home{
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.74), rgba(0, 0, 0, 0.507)),
+      url(../../assets/Image5.jpg);
+    background-size: cover;
+}
+.form-control{
+    border-radius: 50px; 
+    margin-left: 25%;
+   
+}
+.mo{
+    font-size: 20px;
+}
+.table{
+   margin-top: 50px;
+}
+th {
+    background-color: #04AA6D;
+    color: white;
+  }
+ td{
+    padding: 20px;
+    font-size: larger;
+    color: #46ad85;
+ }
+ .waviy span {
+    position: relative;
+    display: inline-block;
+    animation: waviy 1s infinite;
+    animation-delay: calc(0.1s * var(--i));
+    transition: animation 300ms;
+  }
+  
+  h1 span:first-child {
+    font-family: "Fredericka the Great", cursive;
+    font-size: 4.375rem;
+  }
+
+  
+  @keyframes waviy {
+    0%,
+    40%,
+    100% {
+      transform: translateY(0);
+    }
+    20% {
+      transform: translateY(-15px);
+    }
+  }
+  .title{
+    color: aliceblue;
+  }
+  .waviy:hover span {
+    animation:none;
+  }
+  .waviy {
+    position: relative;
+    -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0, 0, 0, 0.103));
+    font-size: 1.9375rem;
+  }
